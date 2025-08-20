@@ -1,14 +1,20 @@
 {
-  "name": "js-learning-helloworld",
+  "name": "js-learning",
   "version": "1.0.0",
-  "description": "Project để học JavaScript với function helloWorld",
-  "main": "function/helloWorld.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "hello": "node cli.js",
-    "start": "node cli.js",
-    "serve": "python3 -m http.server 8000"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["javascript", "learning", "function"],
-  "author": "Your Name",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SonKkc/JS-learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SonKkc/JS-learning/issues"
+  },
+  "homepage": "https://github.com/SonKkc/JS-learning#readme"
 }
