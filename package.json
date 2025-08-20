@@ -1,0 +1,14 @@
+{
+  "name": "js-learning-helloworld",
+  "version": "1.0.0",
+  "description": "Project để học JavaScript với function helloWorld",
+  "main": "function/helloWorld.js",
+  "scripts": {
+    "hello": "node cli.js",
+    "start": "node cli.js",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": ["javascript", "learning", "function"],
+  "author": "Your Name",
+  "license": "MIT"
+}
