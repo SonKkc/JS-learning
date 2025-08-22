@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World Function</title>
 </head>
+
 <body>
-    <h1>Hello World</h1>
-    <button onclick="helloWorld()">Click để chạy helloWorld()</button>
-    
+    <input type="text" id="nameInput" placeholder="Nhập tên của bạn" />
+    <input type="number" id="amountInput" placeholder="Nhập số tiền" />
+    <input type="text" id="walletInput" placeholder="Nhập địa chỉ ví" />
+    <button onclick="helloWorld()">Gửi</button>
+    <ul id="messageList" style="list-style: none;"></ul>
+
     <script src="helloWorld.js"></script>
-    <script>
-        window.onload = function() {
-            helloWorld();
-        };
-    </script>
 </body>
+
 </html>
