@@ -9,7 +9,9 @@
     const userNameUpdateBtn = document.getElementById("updateNameButton");
     const userGenderUpdateBtn = document.getElementById("updateGenderButton");
     const transactionHistory = document.getElementById("transactionHistory");
-    const transactionHistoryBtn = document.getElementById("showTransactionHistoryButton");
+    const transactionHistoryBtn = document.getElementById(
+        "showTransactionHistoryButton"
+    );
     const walletID = 123456;
 
     let transactionHistoryList = [];
@@ -33,15 +35,15 @@
         profileGender.innerText = user.gender;
     }
 
-    userNameUpdateBtn.onclick = function () {
+    function updateUserName() {
         user.name = userNameInput.value || "customer";
         renderUserProfile();
-    };
+    }
 
-    userGenderUpdateBtn.onclick = function () {
+    function updateUserGender() {
         user.gender = userGenderInput.value || "unknown";
         renderUserProfile();
-    };
+    }
 
     function buy() {
         if (moneyInput.value === "") {
@@ -49,7 +51,7 @@
             return;
         }
         if (moneyInput.value > user.wallet_amount) {
-            alert("Insufficient funds");
+            alert("Not enough money");
             return;
         }
         cart.amount = moneyInput.value;
@@ -79,8 +81,8 @@
     function showTransactionHistory() {
         transactionHistory.innerHTML = "";
         transactionHistoryList.forEach((transaction) => {
-            const li = document.createElement("li");
-            li.innerText =
+            const list = document.createElement("li");
+            list.innerText =
                 "User: " +
                 user.name +
                 ", Amount: " +
@@ -89,10 +91,12 @@
                 new Date(transaction.dateTime).toLocaleString() +
                 ", Shop Wallet: " +
                 transaction.shopWallet;
-            transactionHistory.appendChild(li);
+            transactionHistory.appendChild(list);
         });
     }
     renderUserProfile();
     buyBtn.addEventListener("click", buy);
+    userNameUpdateBtn.addEventListener("click", updateUserName);
+    userGenderUpdateBtn.addEventListener("click", updateUserGender);
     transactionHistoryBtn.addEventListener("click", showTransactionHistory);
 })();
