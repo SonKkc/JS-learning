@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: column; align-items: end;">
+        <div>
+            <h2>User Profile</h2>
+            <p>Name: <span id="profileName"></span></p>
+            <p>Wallet Amount: <span id="profileWallet"></span></p>
+            <p>Gender: <span id="profileGender"></span></p>
+        </div>
+        <div>
+            <input type="text" id="userName" placeholder="Enter your name" />
+            <br/>
+            <button id="updateNameButton">Update Name</button>
+            <br/>
+            <input type="text" id="userGender" placeholder="Enter your gender" />
+            <br/>
+            <button id="updateGenderButton">Update Gender </button>
+        </div>
+    </div>
+
+    <input type="number" id="money" placeholder="Enter your Money" />
+
+    <button id="buyBtn">Buy</button>
+
+    <div>
+        <p>Transaction History</p>
+        <ul id="transactionHistory"></ul>
+        <button id="showTransactionHistoryButton">Show Transaction History</button>
+    </div>
+
+    <script src="shop-user.js"></script>
+</body>
+
+</html>
